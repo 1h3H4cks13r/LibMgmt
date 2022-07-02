@@ -1,12 +1,12 @@
 class Book {
     final private String isbn, name, author;
-    private short count;
+    private short stock;
 
-    Book(String isbn, String name, String author) {
+    Book(String isbn, String name, String author, Short stock) {
         this.isbn = isbn;
         this.name = name;
         this.author = author;
-        this.count = 1;
+        this.stock = stock;
     }
 
     public String getISBN() {
@@ -21,15 +21,11 @@ class Book {
         return this.author;
     }
 
-    public Short getCount() {
-        return this.count;
+    public Short getStock() {
+        return this.stock;
     }
 
-    public void incCount() {
-        this.count++;
-    }
-
-    public void decCount() {
-        this.count--;
+    public void addStock(short newStock) {
+        this.stock += newStock;
     }
 }

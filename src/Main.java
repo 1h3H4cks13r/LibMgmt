@@ -7,15 +7,21 @@ public class Main {
 
     static boolean displayMenu(Boolean isLibrarian) {
         if (isLibrarian) {
-            System.out.print("Librarian Operations \n 1: Add Book\n 2: View All Books\n 3: Logout\n\n Select Operation : ");
+            System.out.print("Librarian Operations \n 1: Add New Book\n 2: Add Book Stock\n 3: View Stock\n 4: View All Books\n 5: Logout\n\n Select Operation : ");
             switch(in.nextInt()) {
                 case 1:
-                    lib.addBook();
+                    lib.addNewBook();
                     break;
                 case 2:
-                    lib.viewBooks();
+                    lib.addBookStock();
                     break;
                 case 3:
+                    lib.displayStock();
+                    break;
+                case 4:
+                    lib.viewBooks();
+                    break;
+                case 5:
                     return false;
                 default:
                     System.out.println("Wrong choice!");
